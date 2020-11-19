@@ -8,7 +8,7 @@ import {
   Dimensions,
 } from 'react-native';
 import {ImageHeader, User, Eclipse} from '../../assets';
-import {Container, PesananAktif} from '../../components/';
+import {Container, AntrianAktif} from '../../components/';
 import ButtonIcon from '../../components/ButtonIcon';
 import {WARNA_ABU_ABU} from '../../utils/constant';
 import {ScrollView} from 'react-native-gesture-handler';
@@ -29,20 +29,14 @@ const Beranda = () => {
         <View style={styles.layanan}>
           <Text style={styles.label}>Layanan Kami</Text>
           <View style={styles.iconLayanan}>
-            <ButtonIcon title="Kiloan" type="layanan" />
-            <ButtonIcon title="Satuan" type="layanan" />
-            <ButtonIcon title="VIP" type="layanan" />
-            <ButtonIcon title="Karpet" type="layanan" />
-            <ButtonIcon title="Setrika Saja" type="layanan" />
-            <ButtonIcon title="Ekspress" type="layanan" />
+            <ButtonIcon title="Pendaftaran Online" />
+            <ButtonIcon title="Jadwal Dokter" />
+            <ButtonIcon title="Jadwal Operasi" />
           </View>
         </View>
-        <View style={styles.PesananAktif}>
-          <Text style={styles.label}>Riwayat Aktif</Text>
-          <PesananAktif title="Riwayat No. 0002142" status="Sudah Selesai"/>
-          <PesananAktif title="Riwayat No. 0002142" status="Masih Dicuci"/>
-          <PesananAktif title="Riwayat No. 0002142" status="Sudah Selesai"/>
-          <PesananAktif title="Riwayat No. 0002142" status="Sudah Selesai"/>
+        <View style={styles.AntrianAktif}>
+          <Text style={styles.label}>Antrian Anda</Text>
+          <AntrianAktif title="Riwayat No. 0002142"/>
         </View>
       </ScrollView>
     </View>
@@ -63,7 +57,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     position: 'relative',
     width: windowWidth,
-    height: windowHeight * 0.32,
+    height: windowHeight * 0.28,
     paddingHorizontal: 30,
     paddingTop: 30,
   },
@@ -71,11 +65,11 @@ const styles = StyleSheet.create({
     position: 'absolute',
     right: 0,
     width: windowWidth * 0.4,
-    height: windowHeight * 0.2,
+    height: windowHeight * 0.18,
   },
   user: {
-    width: windowWidth * 0.2,
-    height: windowHeight * 0.12,
+    width: windowWidth * 0.16,
+    height: windowHeight * 0.08,
   },
   hello: {
     marginTop: windowHeight * 0.02,
@@ -92,10 +86,10 @@ const styles = StyleSheet.create({
     fontFamily: 'TitilliumWeb-Regular',
   },
   layanan: {
-    paddingLeft: 30,
     paddingTop: 10,
   },
   label: {
+    paddingLeft: 30,
     fontSize: 18,
     fontFamily: 'TitilliumWeb-Bold',
   },
@@ -103,9 +97,9 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     marginTop: 10,
-    flexWrap: 'wrap',
+    paddingHorizontal: 35,
   },
-  PesananAktif: {
+  AntrianAktif: {
     paddingTop: 10,
     paddingHorizontal: 30,
     backgroundColor: WARNA_ABU_ABU,

@@ -1,9 +1,6 @@
 import React from 'react';
-import {StyleSheet, Text, View, Dimensions, Image} from 'react-native';
-import {WARNA_UTAMA} from '../../utils/constant';
+import { Dimensions, Image, StyleSheet, Text, View } from 'react-native';
 import { News } from '../../assets';
-import ButtonIcon from '../ButtonIcon';
-import Gap from '../Gap';
 
 const Container = () => {
   return (
@@ -39,20 +36,19 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   isiNews: {
+    flexShrink: 1,
   },
   judul: {
-    flexShrink: 1,
-    fontSize: 16,
+    fontSize: 14,
     color: 'black',
     fontFamily: 'TitilliumWeb-Bold',
     padding: 10
   },
   isi: {
-    flexShrink: 1,
-    fontSize: 16,
-    color: 'black',
     fontSize: 10,
+    color: 'black',
     fontFamily: 'TitilliumWeb-Regular',
+    paddingHorizontal: 10
   },
   news: {
     width: windowWidth * 0.58,

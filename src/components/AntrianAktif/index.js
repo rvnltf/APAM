@@ -1,21 +1,25 @@
 import React from 'react';
 import {StyleSheet, Text,View, Dimensions, TouchableOpacity} from 'react-native';
-import {IconPesananAktif} from '../../assets';
-import { WARNA_UTAMA, WARNA_WARNING, WARNA_ABU_ABU } from '../../utils/constant';
+import {IconAntrian} from '../../assets';
+import { WARNA_DISABLE } from '../../utils/constant';
 
-const PesananAktif = ({title, status}) => {
+const AntrianAktif = () => {
   return (
     <TouchableOpacity style={styles.container}>
-      <IconPesananAktif />
+      <View style={styles.iconPoli}>
+        <IconAntrian />
+        <Text style={styles.textPoli}>Poliklinik Syaraf</Text>
+      </View>
       <View style={styles.text}>
-      <Text style={styles.title}>{title}</Text>
-      <Text style={styles.status(status)}>{status}</Text>
+        <Text style={styles.title}>dr. Andi Suharso, Sp. S</Text>
+        <Text style={styles.status}>Penjamin</Text>
+        <Text style={styles.status}>Tanggal</Text>
       </View>
     </TouchableOpacity>
   );
 };
 
-export default PesananAktif;
+export default AntrianAktif;
 
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
@@ -35,18 +39,29 @@ const styles = StyleSheet.create({
     shadowRadius: 4.65,
     elevation: 7,
     marginVertical: windowHeight*0.02,
-    alignItems: 'center'
+  },
+  iconPoli: {
+    width: windowWidth*0.15,
+    height: windowHeight*0.13,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  textPoli: {
+    textAlign: 'center',
+    flexShrink: 1,
+    fontSize: 16,
+    fontFamily: 'TitilliumWeb-SemiBold'
   },
   text: {
     marginLeft: windowWidth*0.02,
   },
   title: {
-    fontSize: 18,
+    fontSize: 22,
     fontFamily: 'TitilliumWeb-SemiBold'
   },
-  status: (status) => ({
-    fontSize: 14,
+  status: {
+    fontSize: 18,
     fontFamily: 'TitilliumWeb-Light',
-    color: status === 'Sudah Selesai' ? WARNA_UTAMA : status === 'Masih Dicuci' ? WARNA_WARNING : WARNA_ABU_ABU,
-  })
+    color : WARNA_DISABLE
+  }
 });

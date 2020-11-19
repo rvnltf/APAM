@@ -6,15 +6,10 @@ import IconBeranda from './beranda.svg';
 import IconBerandaActive from './beranda-active.svg';
 import IconRiwayat from './riwayat.svg';
 import IconRiwayatActive from './riwayat-active.svg';
-import IconAddSaldo from './addSaldo.svg';
-import IconGetPoint from './getPoint.svg';
-import IconKiloan from './kiloan.svg';
-import IconVIP from './vip.svg';
-import IconSatuan from './satuan.svg';
-import IconEkspress from './ekspress.svg';
-import IconSetrika from './setrika.svg';
-import IconKarpet from './karpet.svg';
-import IconPesananAktif from './pesananAktif.svg'
+import IconPendaftaran from './hospital.svg'
+import IconJadwal from './phonendoscope.svg'
+import IconOperasi from './electrocardiogram.svg'
+import IconAntrian from './electrocardiogram-report.svg'
 
 export {
   IconProfil,
@@ -25,13 +20,8 @@ export {
   IconBerandaActive,
   IconRiwayat,
   IconRiwayatActive,
-  IconAddSaldo,
-  IconGetPoint,
-  IconKiloan,
-  IconVIP,
-  IconSatuan,
-  IconEkspress,
-  IconSetrika,
-  IconKarpet,
-  IconPesananAktif
+  IconPendaftaran,
+  IconJadwal,
+  IconOperasi,
+  IconAntrian
 };

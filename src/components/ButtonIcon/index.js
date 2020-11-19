@@ -1,64 +1,65 @@
 import React from 'react';
-import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
+import {StyleSheet, Text, View, TouchableOpacity, Dimensions} from 'react-native';
 import {
-  IconAddSaldo,
-  IconGetPoint,
-  IconKiloan,
-  IconKarpet,
-  IconSatuan,
-  IconVIP,
-  IconSetrika,
-  IconEkspress,
+  IconPendaftaran,
+  IconJadwal,
+  IconOperasi
 } from '../../assets';
 import {WARNA_SEKUNDER} from '../../utils/constant';
 
-const ButtonIcon = ({title, type}) => {
+const ButtonIcon = ({title}) => {
   const Icon = () => {
-    if (title === 'Add Saldo') return <IconAddSaldo />;
+    if (title === 'Pendaftaran Online') return <IconPendaftaran />;
 
-    if (title === 'Get Point') return <IconGetPoint />;
+    if (title === 'Jadwal Dokter') return <IconJadwal />;
 
-    if (title === 'Kiloan') return <IconKiloan />;
+    if (title === 'Jadwal Operasi') return <IconOperasi />;
 
-    if (title === 'Satuan') return <IconSatuan />;
-
-    if (title === 'VIP') return <IconVIP />;
-
-    if (title === 'Karpet') return <IconKarpet />;
-
-    if (title === 'Setrika Saja') return <IconSetrika />;
-
-    if (title === 'Ekspress') return <IconEkspress />;
-
-    return <IconAddSaldo />;
+    return <IconPendaftaran />;
   };
 
   return (
-    <TouchableOpacity style={styles.container(type)}>
-      <View style={styles.button(type)}>
+    <TouchableOpacity style={styles.container}>
+      <View style={styles.button}>
         <Icon />
+        <Text style={styles.text}>{title}</Text>
       </View>
-      <Text style={styles.text(type)}>{title}</Text>
     </TouchableOpacity>
   );
 };
 
 export default ButtonIcon;
 
+const windowWidth = Dimensions.get('window').width;
+const windowHeight = Dimensions.get('window').height;
+
 const styles = StyleSheet.create({
-  container: (type) => ({
-      marginBottom : type === "layanan" ? 12 : 0,
-      marginRight : type === "layanan" ? 30 : 0
-  }), 
-  button: (type) => ({
-    backgroundColor: WARNA_SEKUNDER,
-    padding: type === 'layanan' ? 12 : 7,
+  container: {
+      marginBottom : 20,
+      flexDirection: 'row'
+  }, 
+  button:{
+    width: windowWidth * 0.25,
+    height: windowHeight * 0.13,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'white',
     borderRadius: 10,
-  }),
-  text: (type) => ({
-    fontSize: type === 'layanan' ? 14 : 10,
-    fontFamily:type === 'layanan' ? 'TitilliumWeb-Light' : 'TitilliumWeb-Regular',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 20,
+    },
+    shadowOpacity: 0.29,
+    shadowRadius: 4.65,
+    elevation: 7,
+  },
+  text: {
+    padding: 10,
+    fontSize: 14,
+    fontFamily:'TitilliumWeb-Light',
     textAlign: 'center',
-  }),
+    flexShrink: 1,
+  },
 
 });
