@@ -8,17 +8,19 @@ const Welcome = () => {
             <Image source={LogoAPAM} style={styles.logo} />
             <Text style={styles.judul}>RSMM INDRAMAYU</Text>
             <Text style={styles.text}>Aplikasi Antrian dan Pasien Mandiri</Text>
-            <TouchableOpacity style={styles.grup}>
-                <View style={styles.button}>
-                    <Text style={styles.text}>MASUK</Text>
-                </View>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.grup}>
-                <View style={styles.button}>
-                    <Text style={styles.text}>DAFTAR</Text>
-                </View>
-            </TouchableOpacity>
             <Image source={Ellipse} style={styles.ellipse} />
+            <View style={styles.grup}>
+                <TouchableOpacity>
+                    <View style={styles.buttonAtas}>
+                        <Text style={styles.textButton}>MASUK</Text>
+                    </View>
+                </TouchableOpacity>
+                <TouchableOpacity>
+                    <View style={styles.buttonBawah}>
+                        <Text style={styles.textButton}>DAFTAR</Text>
+                    </View>
+                </TouchableOpacity>
+            </View>
         </View>
     );
 }
@@ -47,17 +49,36 @@ const styles = StyleSheet.create({
     text: {
         paddingTop: 10,
         fontSize: 28,
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        paddingBottom: 100
     },
-    button:{
+    textButton: {
+        fontSize: 28,
+        fontWeight: 'bold',
+        color: 'white'
+    },
+    grup: {
+        position: 'absolute',
+        bottom: 70,
+    },
+    buttonAtas:{
         backgroundColor: '#EB3B65',
         width: windowWidth * 0.7,
         height: windowHeight * 0.08,
-        marginVertical: 50,
+        borderRadius: windowHeight * 0.04,
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        marginVertical: 20,
     },
-    grup: {
+    buttonBawah: {
+        width: windowWidth * 0.7,
+        height: windowHeight * 0.08,
+        borderRadius: windowHeight * 0.04,
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginVertical: 20,
+        borderColor: 'white',
+        borderWidth: 3
     },
     ellipse:{
         width: windowWidth,
