@@ -78,12 +78,10 @@ const styles = StyleSheet.create({
   username: {
     fontSize: 22,
     color: 'white',
-    fontFamily: 'TitilliumWeb-Bold',
   },
   norm: {
     fontSize: 18,
     color: 'white',
-    fontFamily: 'TitilliumWeb-Regular',
   },
   layanan: {
     paddingTop: 10,
@@ -91,7 +89,6 @@ const styles = StyleSheet.create({
   label: {
     paddingLeft: 30,
     fontSize: 18,
-    fontFamily: 'TitilliumWeb-Bold',
   },
   iconLayanan: {
     flexDirection: 'row',

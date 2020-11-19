@@ -4,5 +4,6 @@ import Eclipse from './eclipse.png';
 import LogoSplash from './logoSplash.png';
 import News from './news.png';
 import LogoAPAM from './logoapam.png';
+import Ellipse from './Ellipse.png';
 
-export { Eclipse, User, LogoSplash, ImageHeader, News, LogoAPAM }
+export { Eclipse, User, LogoSplash, ImageHeader, News, LogoAPAM, Ellipse }

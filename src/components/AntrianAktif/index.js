@@ -50,18 +50,15 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     flexShrink: 1,
     fontSize: 16,
-    fontFamily: 'TitilliumWeb-SemiBold'
   },
   text: {
     marginLeft: windowWidth*0.02,
   },
   title: {
     fontSize: 22,
-    fontFamily: 'TitilliumWeb-SemiBold'
   },
   status: {
     fontSize: 18,
-    fontFamily: 'TitilliumWeb-Light',
     color : WARNA_DISABLE
   }
 });

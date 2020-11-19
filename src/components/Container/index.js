@@ -41,13 +41,11 @@ const styles = StyleSheet.create({
   judul: {
     fontSize: 14,
     color: 'black',
-    fontFamily: 'TitilliumWeb-Bold',
     padding: 10
   },
   isi: {
     fontSize: 10,
     color: 'black',
-    fontFamily: 'TitilliumWeb-Regular',
     paddingHorizontal: 10
   },
   news: {

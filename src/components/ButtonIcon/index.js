@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, Text, View, TouchableOpacity, Dimensions} from 'react-native';
+import {AppRegistry, StyleSheet, Text, View, TouchableOpacity, Dimensions} from 'react-native';
 import {
   IconPendaftaran,
   IconJadwal,
@@ -57,7 +57,6 @@ const styles = StyleSheet.create({
   text: {
     padding: 10,
     fontSize: 14,
-    fontFamily:'TitilliumWeb-Light',
     textAlign: 'center',
     flexShrink: 1,
   },
