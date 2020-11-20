@@ -6,10 +6,11 @@ import IconBeranda from './beranda.svg';
 import IconBerandaActive from './beranda-active.svg';
 import IconRiwayat from './riwayat.svg';
 import IconRiwayatActive from './riwayat-active.svg';
-import IconPendaftaran from './hospital.svg'
-import IconJadwal from './phonendoscope.svg'
-import IconOperasi from './electrocardiogram.svg'
-import IconAntrian from './electrocardiogram-report.svg'
+import IconPendaftaran from './hospital.svg';
+import IconJadwal from './phonendoscope.svg';
+import IconOperasi from './electrocardiogram.svg';
+import IconAntrian from './electrocardiogram-report.svg';
+import Arrow from './arrow.svg';
 
 export {
   IconProfil,
@@ -23,5 +24,6 @@ export {
   IconPendaftaran,
   IconJadwal,
   IconOperasi,
-  IconAntrian
+  IconAntrian,
+  Arrow
 };

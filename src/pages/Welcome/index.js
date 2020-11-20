@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity, Dimensions } from 'react-native';
 import { LogoAPAM, Ellipse } from "../../assets";
 
-const Welcome = () => {
+const Welcome = ({navigation}) => {
     return (
         <View style={styles.background}>
             <Image source={LogoAPAM} style={styles.logo} />
@@ -10,12 +10,12 @@ const Welcome = () => {
             <Text style={styles.text}>Aplikasi Antrian dan Pasien Mandiri</Text>
             <Image source={Ellipse} style={styles.ellipse} />
             <View style={styles.grup}>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.navigate('Login')}>
                     <View style={styles.buttonAtas}>
                         <Text style={styles.textButton}>MASUK</Text>
                     </View>
                 </TouchableOpacity>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.navigate('Register')}>
                     <View style={styles.buttonBawah}>
                         <Text style={styles.textButton}>DAFTAR</Text>
                     </View>

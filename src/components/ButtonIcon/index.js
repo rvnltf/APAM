@@ -1,11 +1,9 @@
 import React from 'react';
-import {AppRegistry, StyleSheet, Text, View, TouchableOpacity, Dimensions} from 'react-native';
+import { Dimensions, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import {
-  IconPendaftaran,
   IconJadwal,
-  IconOperasi
+  IconOperasi, IconPendaftaran
 } from '../../assets';
-import {WARNA_SEKUNDER} from '../../utils/constant';
 
 const ButtonIcon = ({title}) => {
   const Icon = () => {
